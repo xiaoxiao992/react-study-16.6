@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import {Switch, Redirect, BrowserRouter as Router } from 'react-router-dom'
+import RouteWithSubRoutes from './common/routeWithSubRoutes'
+import routes from './routes/index.js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+    render() {
+        return (
+            <Router>
+                <Switch>
+                    {
+                        routes.map(route => (
+                            <RouteWithSubRoutes {...route} key={route.path} />
+                        ))
+                    }
+                    <Redirect from="/" exact to="/home" />
+                    <Redirect from="/*" to="/error" />
+                </Switch>
+               
+            </Router>
+        )
+    }
 }
-
-export default App;
+export default App
