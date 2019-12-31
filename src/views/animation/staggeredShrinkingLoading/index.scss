@@ -20,7 +20,11 @@ body {
 }
 
 @keyframes shrink {
+
     50% {
-        transform: scale(0);
+        transform: scale(0); // 缩小不可见
     }
+    // 100% {
+    //     transform: scale(0.5); // 缩小不可见
+    // }
 }

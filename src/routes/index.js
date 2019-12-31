@@ -30,6 +30,10 @@ const routes = [
         component: loadableHandler(() => import('../views/animation/gleamingHeading'))
     },
     {
+        path: '/staggeredShrinkingLoading',
+        component: loadableHandler(() => import('../views/animation/staggeredShrinkingLoading'))
+    },
+    {
         path: '/error',
         component: loadableHandler(() => import('../views/error/index'))
     }
