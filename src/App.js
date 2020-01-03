@@ -2,22 +2,29 @@ import React, { Component } from 'react'
 import {Switch, Redirect, BrowserRouter as Router } from 'react-router-dom'
 import RouteWithSubRoutes from './common/routeWithSubRoutes'
 import routes from './routes/index.js'
-import ContextTest from './components/ContextTest'
-import HocTest from './components/HocTest.tsx'
-import Composition from './components/Composition'
-import HookTest from './components/HookTest'
+// import ContextTest from './components/ContextTest'
+// import HocTest from './components/HocTest'
+// import Composition from './components/Composition'
+// import HookTest from './components/HookTest'
+// import FormTest from './components/FormTest'
+import KFormTest from './components/KFormTest'
+import './App.css'
+// import { Button } from 'antd'
 
 class App extends Component {
     render() {
         return (
             <Router>
                 {/* 上下文传值 */}
-                <ContextTest />
-                <HocTest />
+                {/* <ContextTest />
+                <HocTest /> */}
                 {/* 组件复合 */}
-                <Composition />
+                {/* <Composition /> */}
                 {/* Hooks */}
-                <HookTest />
+                {/* <HookTest />
+                <FormTest /> */}
+                <KFormTest />
+                {/* <Button type="primary">Button</Button> */}
                 <Switch>
                     {
                         routes.map(route => (
