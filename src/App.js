@@ -8,6 +8,9 @@ import routes from './routes/index.js'
 // import HookTest from './components/HookTest'
 // import FormTest from './components/FormTest'
 import KFormTest from './components/KFormTest'
+import Dialog from './components/Dialog'
+// import ReduxTest from './components/ReduxTest'
+import MyReduxTest from './components/MyReduxTest'
 import './App.css'
 // import { Button } from 'antd'
 
@@ -23,7 +26,12 @@ class App extends Component {
                 {/* Hooks */}
                 {/* <HookTest />
                 <FormTest /> */}
-                <KFormTest />
+                {/* <KFormTest /> */}
+                {/* <Dialog>
+                    弹窗。。。。。。
+                </Dialog> */}
+                {/* <ReduxTest /> */}
+                <MyReduxTest />
                 {/* <Button type="primary">Button</Button> */}
                 <Switch>
                     {
