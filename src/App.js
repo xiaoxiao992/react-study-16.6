@@ -10,7 +10,8 @@ import routes from './routes/index.js'
 import KFormTest from './components/KFormTest'
 import Dialog from './components/Dialog'
 // import ReduxTest from './components/ReduxTest'
-import MyReduxTest from './components/MyReduxTest'
+// import MyReduxTest from './components/MyReduxTest'
+import MyRouterTest from './components/MyRouterTest'
 import './App.css'
 // import { Button } from 'antd'
 
@@ -31,7 +32,8 @@ class App extends Component {
                     弹窗。。。。。。
                 </Dialog> */}
                 {/* <ReduxTest /> */}
-                <MyReduxTest />
+                {/* <MyReduxTest /> */}
+                <MyRouterTest />
                 {/* <Button type="primary">Button</Button> */}
                 <Switch>
                     {
@@ -42,8 +44,6 @@ class App extends Component {
                     <Redirect from="/" exact to="/home" />
                     <Redirect from="/*" to="/error" />
                 </Switch>
-
-               
             </Router>
         )
     }

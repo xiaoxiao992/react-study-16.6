@@ -1,13 +1,15 @@
-// 自己实现一个redux，如下这些方法
+// 自己实现一个redux原理，如下这些方法
 // createStore创建store
 // reducer初始化、修改状态函数
 // getState获取状态值
 // dispatch提交更新
 // subscribe变更订阅
+
 export function createStore(reducer, enhancer) {
     // 使用原始redux的几个方法构建react-redux
     // 如果存在enhancer
     if(enhancer) {
+        // 高阶函数
         return enhancer(createStore)(reducer)
     }
 
@@ -42,6 +44,7 @@ export function createStore(reducer, enhancer) {
 }
 
 export function applyMiddleware(...middlewares) {
+    // 返回强化以后函数
     return createStore => (...args) => {
         // 完成之前createStore工作
         const store = createStore(...args)
